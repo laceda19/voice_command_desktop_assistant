@@ -79,5 +79,35 @@ class VoiceAssistant(Assistant):
 
             pyautogui.write(text, interval=0.05)
 
-            self.speak("Typing completed"
+            self.speak("Typing completed")
+
+        elif "move right" in command:
+            pyautogui.moveRel(100, 0)
+
+        elif "move left" in command:
+            pyautogui.moveRel(-100, 0)
+
+        elif "move up" in command:
+            pyautogui.moveRel(0, -100)
+
+        elif "move down" in command:
+            pyautogui.moveRel(0, 100)
+
+        elif "click" in command:
+            pyautogui.click()
+
+        elif "double click" in command:
+            pyautogui.doubleClick()
+
+        elif "right click" in command:
+            pyautogui.rightClick()
+
+        elif "scroll up" in command:
+            pyautogui.scroll(500)
+
+        elif "scroll down" in command:
+            pyautogui.scroll(-500)
+
+
+
 
