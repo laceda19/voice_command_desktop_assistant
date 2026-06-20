@@ -118,6 +118,34 @@ class VoiceAssistant(Assistant):
 
             self.speak("Screenshot taken")
 
+        elif "volume up" in command:
+
+            for count in range(5):
+                keyboard.press_and_release("volume up")
+
+        elif "volume down" in command:
+
+            for count in range(5):
+                keyboard.press_and_release("volume down")
+
+        elif "mute" in command:
+            keyboard.press_and_release("volume mute")
+
+        elif "copy" in command:
+            pyautogui.hotkey("ctrl", "c")
+
+        elif "paste" in command:
+            pyautogui.hotkey("ctrl", "v")
+
+        elif "close window" in command:
+            pyautogui.hotkey("alt", "f4")
+
+        elif "minimize" in command:
+            pyautogui.hotkey("win", "down")
+
+        elif "exit" in command:
+            self.speak("Goodbye")
+
 
 
 
