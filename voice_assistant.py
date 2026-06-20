@@ -1,3 +1,13 @@
+import speech_recognition as sr
+import os
+import webbrowser
+import pyautogui
+import time
+import keyboard
+
+from assistant import Assistant
+
+
 class VoiceAssistant(Assistant):
 
     def __init__(self):
