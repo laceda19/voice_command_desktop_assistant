@@ -108,6 +108,16 @@ class VoiceAssistant(Assistant):
         elif "scroll down" in command:
             pyautogui.scroll(-500)
 
+        elif "screenshot" in command:
+
+            filename = f"screenshot_{int(time.time())}.png"
+
+            screenshot = pyautogui.screenshot()
+
+            screenshot.save(filename)
+
+            self.speak("Screenshot taken")
+
 
 
 
