@@ -27,3 +27,30 @@ class VoiceAssistant(Assistant):
 
             except:
                 return ""
+
+    def execute_command(self, command):
+
+        if "open chrome" in command:
+            os.system("start chrome")
+            self.speak("Opening Chrome")
+
+        elif "open calculator" in command:
+            os.system("start calculator")
+            self.speak("Opening Calculator")
+
+        elif "open notepad" in command:
+            os.system("start notepad")
+            self.speak("Opening Notepad")
+
+        elif "open paint" in command:
+            os.system("mspaint")
+            self.speak("Opening Paint")
+
+        elif "open youtube" in command:
+            webbrowser.open("https://youtube.com")
+            self.speak("Opening YouTube")
+
+        elif "open google" in command:
+            webbrowser.open("https://google.com")
+            self.speak("Opening Google")
+
