@@ -8,6 +8,15 @@ class VoiceAssistant(Assistant):
 
         self.recognizer = sr.Recognizer()
 
+    # Getter methods
+    def get_assistant_name(self):
+        return self.__assistant_name
+
+    def get_version(self):
+        return self.__version
+
+
+
     def listen(self):
 
         with sr.Microphone() as source:
